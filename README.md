@@ -14,7 +14,8 @@
 
 만약 이미 다른 버전의 Node.js를 사용하는 분들은 [NVM(Node Version Manager)](https://github.com/nvm-sh/nvm)을 이용하여 Node.js 버전을 맞춰주시면 됩니다.
 
-### 설치 절차
+## 설치 절차
+(아래는 윈도우용 설치절차에 대한 설명입니다)
 1. (https://github.com/coreybutler/nvm-windows) 이 페이지로 이동하여 안내에 따라 NVM을 설치합니다.
 
 ## 서버 실행 절차
