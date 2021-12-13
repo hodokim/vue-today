@@ -6,14 +6,16 @@
     <div class="post-contents">
       {{ postItem.contents }}
     </div>
-    <div class="post-time"></div>
+    <div class="post-time">
+      {{ postItem.createdAt }}
+    </div>
   </li>
 </template>
 
 <script>
 export default {
   props: {
-    postItems: {
+    postItem: {
       type: Object,
       required: true,
     },
