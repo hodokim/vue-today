@@ -24,23 +24,17 @@ const router = new VueRouter({
     {
       path: '/main',
       component: () => import('@/views/MainPage.vue'),
-      meta: {
-        auth: true,
-      },
+      meta: { auth: true },
     },
     {
       path: '/add',
       component: () => import('@/views/PostAddPage.vue'),
-      meta: {
-        auth: true,
-      },
+      meta: { auth: true },
     },
     {
       path: '/post/:id',
       component: () => import('@/views/PostEditPage.vue'),
-      meta: {
-        auth: true,
-      },
+      meta: { auth: true },
     },
     {
       path: '*',
@@ -50,7 +44,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (to.meta.auth && store.getters.isLogin) {
+  if (to.meta.auth && !store.getters.isLogin) {
     console.log('인증이 필요합니다');
     next('/login');
     return;
