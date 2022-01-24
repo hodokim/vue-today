@@ -1,9 +1,18 @@
-import Vue from 'vue';
+import { shallowMount } from '@vue/test-utils';
+//import Vue from 'vue';
 import LoginForm from './LoginForm.vue';
 
 describe('LoginForm.vue', () => {
-  test('컴포넌트가 마운팅되면 username 이 존재하고 초기 값으로 설정되어 있어야 한다...', () => {
-    const instance = new Vue(LoginForm).$mount();
-    expect(instance.username).toBe('');
+  test('ID는 이메일 형식이어야 한다...', () => {
+    const wrapper = shallowMount(LoginForm, {
+      data() {
+        return {
+          username: 'testte@st.com',
+        };
+      },
+    });
+    // const idInput = wrapper.find('#username');
+
+    console.log(wrapper.vm.isUsernameValid);
   });
 });
